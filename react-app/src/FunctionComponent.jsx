@@ -29,7 +29,12 @@ export default function FunctionComponent(props){
 
     useEffect(()=>{
         componentDidMount()
+        return componentDidUnmount
     }, [])
+
+    useEffect( ()=> {
+        componentDidUpdate(props, state)
+    }, [props,state])
 
     return(
         <div className="card">
